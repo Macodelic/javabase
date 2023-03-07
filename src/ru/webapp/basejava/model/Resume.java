@@ -1,5 +1,7 @@
 package ru.webapp.basejava.model;
 
+import java.util.Objects;
+
 /**
  * Initial resume class
  */
@@ -27,12 +29,12 @@ public class Resume implements Comparable<Resume> {
 
         Resume resume = (Resume) o;
 
-        return uuid.equals(resume.uuid);
+        return Objects.equals(uuid, resume.getUuid());
     }
 
     @Override
     public int hashCode() {
-        return uuid.hashCode();
+        return Objects.hashCode(uuid);
     }
 
     @Override
