@@ -2,6 +2,8 @@ package ru.webapp.basejava.storage;
 
 import ru.webapp.basejava.model.Resume;
 
+import java.util.Arrays;
+
 public abstract class AbstractArrayStorage implements IStorage {
     protected static final int STORAGE_LIMIT = 10000;
 
@@ -12,7 +14,16 @@ public abstract class AbstractArrayStorage implements IStorage {
         return size;
     }
 
-    public Resume get(String uuid) {
+    public void clear() {
+        Arrays.fill(storage, 0, size, null);
+        size = 0;
+    }
+
+    public Resume[] getAll() {
+        return Arrays.copyOfRange(storage, 0, size);
+    }
+
+    public final Resume get(String uuid) {
         int index = getIndex(uuid);
         if (index == -1) {
             System.out.println("Resume " + uuid + " not exist");
