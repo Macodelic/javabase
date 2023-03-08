@@ -21,7 +21,7 @@ public class SortedArrayStorage extends AbstractArrayStorage {
     }
 
     @Override
-    protected void fillDelete(String uuid, int index) {
+    protected void fillDeletedElem(String uuid, int index) {
         System.arraycopy(storage, index + 1,
                 storage, index, size - index);
     }

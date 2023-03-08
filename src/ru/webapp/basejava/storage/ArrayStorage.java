@@ -19,11 +19,11 @@ public class ArrayStorage extends AbstractArrayStorage {
 
     @Override
     protected void insertElem(Resume r, int index) {
-        storage[index] = r;
+        storage[size] = r;
     }
 
     @Override
-    protected void fillDelete(String uuid, int index) {
+    protected void fillDeletedElem(String uuid, int index) {
         storage[index] = storage[size - 1];
         storage[size - 1] = null;
     }
