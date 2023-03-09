@@ -2,15 +2,15 @@ package ru.webapp.basejava;
 
 import ru.webapp.basejava.model.Resume;
 import ru.webapp.basejava.storage.ArrayStorage;
-import ru.webapp.basejava.storage.IStorage;
+import ru.webapp.basejava.storage.Storage;
 import ru.webapp.basejava.storage.SortedArrayStorage;
 
 /**
  * Test for your ru.webapp.basejava.storage.ArrayStorage implementation
  */
 public class MainTestArrayStorage {
-    static final IStorage ARRAY_STORAGE = new ArrayStorage();
-    static final IStorage SORTED_ARRAY_STORAGE = new SortedArrayStorage();
+    static final Storage ARRAY_STORAGE = new ArrayStorage();
+    static final Storage SORTED_ARRAY_STORAGE = new SortedArrayStorage();
 
     public static void main(String[] args) {
         Resume r1 = new Resume("uuid2");

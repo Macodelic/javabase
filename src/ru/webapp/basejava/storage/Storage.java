@@ -2,7 +2,7 @@ package ru.webapp.basejava.storage;
 
 import ru.webapp.basejava.model.Resume;
 
-public interface IStorage {
+public interface Storage {
 
     void clear();
 
@@ -20,6 +20,4 @@ public interface IStorage {
     Resume[] getAll();
 
     int size();
-
-    Resume[] getFullStorage();
 }

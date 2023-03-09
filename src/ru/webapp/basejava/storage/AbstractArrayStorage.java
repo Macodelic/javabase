@@ -7,15 +7,10 @@ import ru.webapp.basejava.model.Resume;
 
 import java.util.Arrays;
 
-public abstract class AbstractArrayStorage implements IStorage {
+public abstract class AbstractArrayStorage implements Storage {
     protected static final int STORAGE_LIMIT = 10000;
 
     protected final Resume[] storage = new Resume[STORAGE_LIMIT];
-
-    @Override
-    public Resume[] getFullStorage() {
-        return storage;
-    }
 
     protected int size = 0;
 
